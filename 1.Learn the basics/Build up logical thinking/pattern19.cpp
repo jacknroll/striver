@@ -4,11 +4,12 @@ using namespace std;
 int main()
 {
     int n = 5;
-    for (int i = n - 1; i >= 0; i--)
+    for (int i = 0; i < n; i++)
     {
-        for (char j = 'A' + i; j < 'A' + n; j++)
+        for (int j = 0; j < n - i; j++)
         {
-            cout << j;
+            cout << "*";
+            
         }
         cout << endl;
     }
