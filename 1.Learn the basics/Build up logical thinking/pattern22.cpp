@@ -9,7 +9,12 @@ int main()
     {
         for (int j = 0; j < 2 * n - 1; j++)
         {
-            cout << (2 * n - 2) - j << " ";
+            int top = i;
+            int left = j;
+            int bottom = (2 * n - 2) - i;
+            int right = (2 * n - 2) - j;
+            int min_dist = min(min(top, bottom), min(left, right));
+            cout << n - min_dist << " ";
         }
         cout << endl;
     }
