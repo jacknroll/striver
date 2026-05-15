@@ -2,6 +2,7 @@
 #include <cmath>
 using namespace std;
 
+/*
 int armstrong(int x)
 {
     int finalValue = 0, lastDigit;
@@ -15,6 +16,25 @@ int armstrong(int x)
         x = x / 10;
     }
     return finalValue;
+}
+
+*/
+
+int armstrong(int n)
+{
+    int length = log10(n) + 1;
+
+    int result = 0;
+    int remainder;
+
+    while (n > 0)
+    {
+        remainder = n % 10;
+        result = result + pow(remainder, length);
+        n = n / 10;
+    }
+
+    return result;
 }
 
 int main()
