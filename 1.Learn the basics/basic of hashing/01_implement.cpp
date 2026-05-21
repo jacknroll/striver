@@ -9,6 +9,7 @@ int main()
     cin >> n;
     int arr[n];
     for (int i = 0; i < n; i++)
+
     {
         cin >> arr[i];
     }
@@ -23,8 +24,10 @@ int main()
     // for(int i=0;i<n;i++){
     //     cout<<hash[i];
     // }
-    //checking the frequency
-    int number;
-    cin >> number;
-    cout << hash[number] << " ";
+    // checking the frequency
+    
+        int number;
+        cin >> number;
+        cout << hash[number]<<endl; 
+    
 }

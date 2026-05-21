@@ -22,6 +22,8 @@ int main()
 }
 */
 
+/*
+
 int main()
 {
     int n = 1847;
@@ -33,4 +35,23 @@ int main()
         n = n / 10;
     }
     cout << c;
+}
+    */
+
+// Recursion ways to solve counting all digits
+
+int recursionDigits(int n)
+{
+    if (n < 10)
+        return 1;
+    return 1 + recursionDigits(n / 10);
+}
+
+int main()
+{
+    int n;
+    n = 0;
+    int result = recursionDigits(n);
+    cout << result;
+    return 0;
 }
