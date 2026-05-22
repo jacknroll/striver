@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
+
 using namespace std;
+/*
 vector<vector<int>> countfrequencies(vector<int> &arr, int n)
 {
     int hash[13] = {0};
@@ -28,4 +30,45 @@ int main()
         cout << "[" << x[0] << "," << x[1] << "] ";
     }
     return 0;
+}
+
+*/
+
+///////////
+// better way using map
+
+/*
+int main()
+{
+    map<string, int> people = {{"John", 12}, {"adi", 69}, {"mehta", 12}};
+    cout << people["John"];
+    cout << people["adi"];
+    cout << people.at("adi");
+
+    for (auto x : people)
+    {
+        cout << x.first << " " << x.second << endl;
+    }
+}
+
+*/
+
+// using map for storing
+
+int main()
+{
+
+    int arr[] = {1, 2, 0, 1, 2, 0};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    // cout << n;
+    map<int, int> map;
+
+    for (int i = 0; i < n; i++)
+    {
+        map[arr[i]]++;
+    }
+    for (auto x : map)
+    {
+        cout << x.first << " " << x.second << endl;
+    }
 }

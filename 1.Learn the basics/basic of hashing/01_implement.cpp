@@ -25,9 +25,14 @@ int main()
     //     cout<<hash[i];
     // }
     // checking the frequency
-    
+
+    int Q;
+    cin >> Q;
+    while (Q--)
+    {
         int number;
         cin >> number;
-        cout << hash[number]<<endl; 
-    
+
+        cout << hash[number] << endl;
+    }
 }
