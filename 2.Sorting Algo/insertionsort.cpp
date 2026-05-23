@@ -42,7 +42,9 @@ void insertion_sort(int arr[], int n)
 }
     */
 
-void insertion_sort(int arr[], int n)
+    /*
+    
+    void insertion_sort(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -55,6 +57,20 @@ void insertion_sort(int arr[], int n)
             j--;
         }
     }
+}
+
+*/
+
+
+int insertion_sort(int arr,int n){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<=i;j++){
+            int key=i;
+            
+        }
+
+    }
+
 }
 
 int main()

@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include<map>
+#include <map>
 using namespace std;
 
 ////Using hashing
@@ -43,6 +43,7 @@ int main()
 */
 // using mapping
 
+/*
 int main()
 {
     int arr[] = {1, 2, 3, 3, 3};
@@ -50,4 +51,28 @@ int main()
 
     // declare map
     map<int, int> map;
+
+    for (int i = 0; i < n; i++)
+    {
+        map[arr[i]]++;
+    }
+
+
+    int maxFreq = 0;
+    int maxFreqI = 0;
+    for (auto x : map)
+    {
+        if (x.second > maxFreq)
+        {
+            maxFreq = x.second;
+            maxFreqI = x.first;
+        }
+
+    }
+    cout << maxFreqI;
 }
+
+*/
+
+
+
