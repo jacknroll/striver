@@ -2,9 +2,32 @@
 #include <algorithm>
 using namespace std;
 
+// SORTING METHOD TAKES O(NLOGN)
 /*
+int secondLargestElement(vector<int> &arr)
 {
-    int secondLargestElement(vector<int> &nums)
+    sort(arr.begin(), arr.end());
+
+    int largest = arr[arr.size() - 1];
+
+    for (int i = arr.size() - 2; i >= 0; i--)
+    {
+        if (arr[i] != largest)
+        {
+            return arr[i];
+        }
+    }
+    return -1;
+    ;
+}
+//this is sorting method takes o(nlogn)+o(n) time complexity
+*/
+
+// o(n) method with 2 for loops
+/*
+int secondLargestElement(vector<int> &nums)
+{
+
     int secondMax;
     int maxElement;
     if (nums[0] > nums[1])
@@ -12,11 +35,7 @@ using namespace std;
         maxElement = nums[0];
         secondMax = nums[1];
     }
-    else if (nums[0] == nums[1])
-    {
-        maxElement = nums[1];
-        secondMax = nums[2];
-    }
+
     else
     {
         maxElement = nums[1];
@@ -41,30 +60,32 @@ using namespace std;
 }
 */
 
-int secondLargestElement(vector<int> &arr)
+// single for loop,o(n) method
+
+int secondLargestElement(vector<int> &nums)
 {
-    sort(arr.begin(), arr.end());
+    int maxElement = nums[0];
+    int secondMax = -1;
 
-    int largest = arr[arr.size() - 1];
-
-    for (int i = arr.size() - 2; i >= 0; i--)
+    for (int i = 2; i < nums.size(); i++)
     {
-        if (arr[i] != largest)
+        int temp = nums[i];
+        if (temp > maxElement)
         {
-            return arr[i];
+            secondMax = maxElement;
+            maxElement = temp;
+        }
+        else if (temp > secondMax && temp != maxElement)
+        {
+            secondMax = temp;
         }
     }
-    return -1;
-    ;
+    return secondMax;
 }
-
 int main()
 {
-    vector<int> nums = {
-        8,
-        8,
-        8,
-        8};
+    vector<int> nums = {10, 10, 10};
+
     int secondMax = secondLargestElement(nums);
     cout << secondMax;
     return 0;
