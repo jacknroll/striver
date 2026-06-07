@@ -28,6 +28,7 @@ void removeDuplicates(vector<int> arr)
 */
 
 // do it in o(n'2)
+// o(1) space
 
 /*
 void removeDuplicates(vector<int> arr)
@@ -50,7 +51,10 @@ void removeDuplicates(vector<int> arr)
     }
 }
 */
+/*
+//o(n) but o(n) space
 void removeDuplicates(vector<int> arr)
+
 {
     vector<int> newArr;
     for (int i = 0; i < arr.size() - 1; i++)
@@ -70,6 +74,10 @@ void removeDuplicates(vector<int> arr)
     {
         cout << x << " ";
     }
+}
+*/
+void removeDuplicates(vector<int> nums)
+{
 }
 
 int main()
