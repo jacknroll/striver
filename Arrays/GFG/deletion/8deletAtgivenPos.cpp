@@ -3,6 +3,8 @@ using namespace std;
 
 //built in methods
 //o(n),o(1)
+/*
+*/
 void removeElementatPos(vector<int> &arr,int pos){
     arr.erase(arr.begin()+pos-1);
     for(int x:arr){
