@@ -15,6 +15,7 @@ for (int x : arr)
 }
 }
 */
+//o(n),o(1)
 void removeFirstElement(vector<int> &arr)
 {
     for (int i = 0; i < arr.size() - 1; i++)
