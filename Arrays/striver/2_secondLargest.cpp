@@ -2,10 +2,12 @@
 #include <algorithm>
 using namespace std;
 
-// SORTING METHOD TAKES O(NLOGN)
+////////////////////1.SORTING METHOD TAKES O(NLOGN)////////////////////////
 /*
 int secondLargestElement(vector<int> &arr)
 {
+   int s=arr.size();
+   if(s==0||s==1){return -1;}
     sort(arr.begin(), arr.end());
 
     int largest = arr[arr.size() - 1];
@@ -20,10 +22,10 @@ int secondLargestElement(vector<int> &arr)
     return -1;
     ;
 }
-//this is sorting method takes o(nlogn)+o(n) time complexity
+
 */
 
-// o(n) method with 2 for loops
+///////////////////////2.O(n)method with 2 for loops////////////////////////
 /*
 int secondLargestElement(vector<int> &nums)
 {
@@ -67,7 +69,7 @@ int secondLargestElement(vector<int> &nums)
     int maxElement = nums[0];
     int secondMax = -1;
 
-    for (int i = 2; i < nums.size(); i++)
+    for (int i = 1; i < nums.size(); i++)
     {
         int temp = nums[i];
         if (temp > maxElement)
@@ -84,7 +86,7 @@ int secondLargestElement(vector<int> &nums)
 }
 int main()
 {
-    vector<int> nums = {10, 10, 10};
+    vector<int> nums = {10, 20, 30};
 
     int secondMax = secondLargestElement(nums);
     cout << secondMax;

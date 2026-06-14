@@ -23,6 +23,7 @@ void checkSortedOrnot(vector<int> &nums)
 */
 
 // using for loop
+
 bool checkSortedOrnot(vector<int> &nums)
 {
     bool check = false;
