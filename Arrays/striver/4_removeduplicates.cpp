@@ -25,7 +25,8 @@ void removeDuplicates(vector<int> arr)
 */
 
 /////////////////////O(n)Tc But O(n)space///////////////////////////////////
-void removeDuplicates(vector<int> arr)
+/*
+void removeDuplicates(vector<int> &arr)
 
 {
     if (arr.empty())
@@ -45,10 +46,35 @@ void removeDuplicates(vector<int> arr)
         cout << x << " ";
     }
 }
+*/
+
+////////////Inplace-O(n)method//////////////////////
+
+void removeDuplicates(vector<int> &arr)
+{
+    int w, r;
+    w = 0;
+    for (int r = 1; r < arr.size(); r++)
+    {
+
+        if (arr[w] != arr[r])
+        {
+            // int temp = arr[w + 1];
+            // arr[w + 1] = arr[r];
+            // arr[r] = temp;
+            w++;
+            arr[w] = arr[r];
+        }
+    }
+    for (int i = 0; i < w + 1; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
 
 int main()
 {
-    vector<int> arr = {1, 1, 2, 3, 3, 3, 3, 4};
+    vector<int> arr = {1, 2, 2, 3};
     removeDuplicates(arr);
 
     return 0;
