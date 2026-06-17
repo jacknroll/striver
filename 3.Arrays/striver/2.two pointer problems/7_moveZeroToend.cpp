@@ -25,9 +25,10 @@ for (int i = j+1; i < n; i++)
 
    }
 }
+//printing the array
     for(int x:nums){
             cout<<x<<" ";
-        }
+    }
 }
 
 int main(){
