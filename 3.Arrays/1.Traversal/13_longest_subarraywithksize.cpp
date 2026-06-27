@@ -33,6 +33,7 @@ int findingLongestSubarray(vector<int> &nums){
 //////////////////////2.TWO_pointer_problem--O(n) Tc,0(1)////////////////
 
 
+/*
 int findingLongestSubarray(vector<int> &nums){
     int l=0;
     int r=0;
@@ -40,30 +41,64 @@ int findingLongestSubarray(vector<int> &nums){
     int maxLength=0;
     int sum=0;
     int n=nums.size();
-
+    
     while(r<n)
     {
         sum=sum+nums[r];
-
-      while(sum>k &&l<=r)
-      {
-        sum=sum-nums[l];
-        l++;
-      }
-
-      if(sum==k)
-      {
-       if(r-l+1>maxLength){
-        maxLength=r-l+1;
-       }
-      }
-      r++;
+        
+        while(sum>k &&l<=r)
+        {
+            sum=sum-nums[l];
+            l++;
+        }
+        
+        if(sum==k)
+        {
+            if(r-l+1>maxLength){
+                maxLength=r-l+1;
+            }
+        }
+        r++;
     }
     return maxLength;
-
+    
 }
 
+*/
+
+
+int findingLongestSubarray(vector<int> &nums){
+    int l=0;
+    int r=0;
+    int maxLength=0;
+    int sum=0;
+    int k=15;
+    while(r<nums.size()){
+        
+    sum=sum+nums[r];
     
+    
+    while(sum>k)
+    {
+        sum=sum-nums[l];
+        l++;
+    }
+    if(sum==k)
+    {
+        if(maxLength<r-l+1)
+        {
+            maxLength=r-l+1;
+        }
+        
+    }
+    r++;
+}
+return maxLength;
+}
+
+
+
+
 
 
 
@@ -73,8 +108,10 @@ int findingLongestSubarray(vector<int> &nums){
 
 
 int main(){
-    vector<int> arr={10,5,2,7,1,9};
-    // vector<int> arr={10,15,0};
+    // vector<int> arr={-10,25,20,7,1,9};
+    // vector<int> arr={-10,25,20,7,1,9};
+    // vector<int> arr={10,-5,10};
+    vector<int> arr={6,10   ,-5,5};
     int res=findingLongestSubarray(arr);
     cout<<res;
     return 0;
