@@ -11,5 +11,4 @@ int main()
 {
     vector<int> arr={1,0,2,2,0,1};
     sortRedBlueWhite(arr);
-
 }
