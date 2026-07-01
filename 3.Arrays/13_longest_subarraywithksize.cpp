@@ -67,6 +67,8 @@ int findingLongestSubarray(vector<int> &nums){
 */
 
 
+
+/*
 int findingLongestSubarray(vector<int> &nums){
     int l=0;
     int r=0;
@@ -95,6 +97,11 @@ int findingLongestSubarray(vector<int> &nums){
 }
 return maxLength;
 }
+*/
+
+
+
+
 
 
 
